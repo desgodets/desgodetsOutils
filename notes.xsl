@@ -40,7 +40,7 @@
         </xsl:copy>
     </xsl:template>
     
-    
+    <!-- factoriser avec une règle nommée paramétrisée -->
     <xsl:template match="note[@place='foot']">
         <xsl:variable name="countFootNotes">
             <xsl:choose>
@@ -125,14 +125,7 @@
         <p><xsl:apply-templates/></p>
     </xsl:template>-->
     
-    <xsl:template match="divGen[@type='notesCritical']">
-        <div type="{@type}">
-            <xsl:copy-of select="head"/>
-            <xsl:apply-templates select="//note[@place='foot']" mode="notes" /><!-- solution trash, sortir le reste du traitement -->
-        </div>
-    </xsl:template>
-    
-    <xsl:template match="divGen[@type='notes']">
+    <xsl:template match="divGen[@type='notesCritical'] | divGen[@type='notes']">
         <div type="{@type}">
             <xsl:copy-of select="head"/>
             <xsl:apply-templates select="//note[@place='foot']" mode="notes" /><!-- solution trash, sortir le reste du traitement -->
@@ -144,7 +137,13 @@
             <xsl:copy-of select="head"/>
             <xsl:apply-templates select="//note[@place='comment']" mode="notes" /><!-- solution trash, sortir le reste du traitement -->
         </div>
-        <!-- @place='comment' -->
     </xsl:template>
+    
+    <!--
+    <!-\- ancre de la transformation dans le fichier source -\->
+    <divGen n="tPresentationBackFr03" type="notes">
+        <head>notes</head>
+    </divGen>
+    -->
     
 </xsl:stylesheet>
