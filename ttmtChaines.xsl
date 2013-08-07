@@ -36,7 +36,9 @@
         </xsl:variable>
         <xsl:apply-templates select="$intermediate" mode="phase2"/>
     </xsl:template>
-
+    
+    <!-- factoriser avec une règle nommée paramétrisée -->
+    
     <!-- glossaire juridique -->
     <xsl:template match="hi[@rend='Desgodets_GlossaireJuridique' or @rend='gJ']" mode="phase1">
         <xsl:element name="term">

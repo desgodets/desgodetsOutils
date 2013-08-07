@@ -13,8 +13,8 @@
     @knownBugs :    
     @todo :         
     @historique :   La transformation Oxgarage ne reconnaît pas les titres Desgodets.
-                    Le mode équation avait été utilisé pour traiter certains caractères (1/8, etc.).
-                    Il a fallu manuellement retirer les liens hypertextes du documents Word car ils créaient un document résultat inexploitable pour la transformation.
+                    Le mode équation avait été utilisé pour traiter certains caractères (1/8, etc.) à l'origine d'un problème de validité..
+                    Il a fallu manuellement retirer les liens hypertextes dans certains documents Word car ils créaient un document résultat inexploitable pour la transformation.
                     Intégrer les règles ci-dessous dans une personnalisation du framework de transformation TEI pourrait permettre de régler une partie des problèmes mentionnés ci-dessus 
                     Pour supprimer de manière spécifique les attributs rend="normal" et rend="Notedebasdepage" de p, avons rencontré un problème de logique pour le test (et/ou)
     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -79,6 +79,8 @@
     <!-- correction entre crochets \[corrigé.*\] -->
     <!-- ajout entre crochets \[ajout.*\] -->
     <!-- pagination \[p\..*\] -->
+    
+    <!-- Factoriser avec une règle nommée et un paramètre -->
     
     <!-- mettre le contenu de hi[rend='Desgodets_IndexRerum'] dans ? -->
     <xsl:template match="hi[@rend='Desgodets_IndexRerum']">
