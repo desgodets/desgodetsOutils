@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-    @Name :         entities.xsl
+    @Name :         getEntities.xsl
     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     @version :      003
     @creaDate :     2013/07/17
@@ -9,12 +9,12 @@
     @vXslt:         2.0
     @autor :        Emmanuel Château emchateau@laposte.net
     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-    @use :          Cette XSLT récupère les entités nommées pour l'index
+    @use :          Cette XSLT extrait les entités nommées pour préparer les index de l'édition
     @knownBugs :    
     @todo :         Travailler en évaluant les entités présentes dans le fichier d'index
     @historique :   
     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-    @gratefulness : Kiln
+    @gratefulness : 
     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
