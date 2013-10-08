@@ -55,7 +55,7 @@
     
     <!-- pagination -->
     <xsl:template match="p/text()" mode="phase1">
-        <xsl:analyze-string select="." regex="\[p\.(.*?)\]">
+        <xsl:analyze-string select="." regex="\[p\.(.*?)\]" flags="s">
             <xsl:matching-substring>
                 <xsl:element name="pb"/>
                 <xsl:element name="fw">
