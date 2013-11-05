@@ -45,10 +45,10 @@
         <xsl:variable name="countFootNotes">
             <xsl:choose>
                 <xsl:when test="$presentation = 'yes'">
-                    <xsl:sequence select="concat($prefix , 'N' )"/>
+                    <xsl:sequence select="concat('#' , $prefix , 'N' )"/>
                 </xsl:when>
                 <xsl:otherwise>
-                    <xsl:sequence select="concat($prefix , 'Nc' )"/>
+                    <xsl:sequence select="concat('#' , $prefix , 'Nc' )"/>
                 </xsl:otherwise>
             </xsl:choose>
             <xsl:number format="0001" level="any" count="note[@place='foot']"/>
@@ -80,7 +80,7 @@
     
     <xsl:template match="note[@place='comment']">
         <xsl:variable name="countFootNotes">
-            <xsl:sequence select="concat($prefix , 'Nh' )"/>
+            <xsl:sequence select="concat('#' , $prefix , 'Nh' )"/>
             <xsl:number format="0001" level="any" count="note[@place='comment']"/>
         </xsl:variable>
         <xsl:variable name="noteCritical">
@@ -110,6 +110,7 @@
             <xsl:apply-templates />                
         </xsl:element>
     </xsl:template>
+    
     <xsl:template match="note[@place='comment']" mode="notes">
         <xsl:variable name="countFootNotes">
             <xsl:sequence select="concat($prefix , 'Nh' )"/>
