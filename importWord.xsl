@@ -55,30 +55,6 @@
         </xsl:element>
     </xsl:template>
     
-    <!-- mettre le contenu de hi[rend='Desgodets_IndexRerum'] dans ? -->
-
-    
-    <!-- ENTITES CARACTERES -->
-    <!-- &laquo; &raquo; &nbsp;	&thinsp; &hellip; &frac12; -->
-    <!-- sélection des passages -->
-    <!--
-        //hi[@rend='Desgodets_IndexRerum']/tokenize(.,'\[')
-        //hi[@rend='Desgodets_IndexRerum']/tokenize(.,'Ps')
-        //hi[@rend='Desgodets_IndexRerum']/substring-before(.,'[')
-        substring-before(substring-after(//*[@id="crumbtrail"]/div[5]/span/text(), "("), "
-        //hi[@rend='Desgodets_IndexRerum']/substring-before(substring-after(., '['),']')
-        contains(.,'http://')
-    -->
-    <!-- REGEX -->
-    <!-- passages entre crochets \[.*\] -->
-    <!-- sic entre crochets \[sic.*\] -->
-    <!-- abs entre crochets \[abs.*\] -->
-    <!-- abs entre crochets \[abréviation par suspension.*\] -->
-    <!-- abc entre crochets \[abréviation par contraction.*\] -->
-    <!-- ajout entre crochets \[ajouté.*\] -->
-    <!-- correction entre crochets \[corrigé.*\] -->
-    <!-- ajout entre crochets \[ajout.*\] -->
-    <!-- pagination \[p\..*\] -->
     
     <!-- Factoriser avec une règle nommée et un paramètre -->
     
