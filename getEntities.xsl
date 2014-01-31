@@ -31,6 +31,9 @@
             <div type="gJ">
                 <xsl:apply-templates mode="gJ" select="/*/text" />
             </div>
+            <div type="indexLocorum">
+                <xsl:apply-templates mode="indexLocorum" select="//placeName" />
+            </div>
         </div>
     </xsl:template>
     
@@ -46,6 +49,7 @@
             <xsl:with-param name="type" select="'gJ'" />
         </xsl:call-template>
     </xsl:template>
+    
     
     <xsl:template name="listeUniqueTriee">
         <xsl:param name="type"/>
@@ -66,5 +70,26 @@
             </xsl:for-each>
         </xsl:for-each-group>
     </xsl:template>
+    
+    <xsl:template match="placeName" mode="indexLocorum">
+    <xsl:for-each-group select="." group-by="@ref">
+            <!-- chercher moyen plus efficace -->
+            <xsl:sort select="@ref" />
+            <xsl:for-each select="current-group()[1]">
+                <place xml:id="{replace( current-grouping-key() , '#' , '' )}">
+                    <placeName full="yes">
+                            <!--<xsl:value-of select="current-group()[1]" />-->
+                        <xsl:value-of select="@full" />
+                    </placeName>
+                    <idno type="authBnf">
+                        <xsl:value-of select="@idno" />
+                    </idno>
+                </place>
+            </xsl:for-each>
+        </xsl:for-each-group></xsl:template>
+    
+    
+    
+   
     
 </xsl:stylesheet>
