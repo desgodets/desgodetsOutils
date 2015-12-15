@@ -35,7 +35,7 @@
                 <xsl:text>#</xsl:text>
                 <xsl:value-of select="@xml:id" />
                 <xsl:text>  </xsl:text>
-                <xsl:value-of select="concat('#c2', substring(@xml:id, 3))" />
+                <xsl:value-of select="concat('#t5', substring(@xml:id, 3))" />
             </xsl:attribute>
             <xsl:apply-templates />
         </xsl:element>

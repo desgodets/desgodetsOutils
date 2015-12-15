@@ -32,7 +32,7 @@
     <xsl:strip-space elements="*"/>
     
     <!-- choix du préfixe -->
-    <xsl:param name="prefix" select="'o5'" />
+    <xsl:param name="prefix" select="'t4'" />
     
     <!-- Copie à l'identique du fichier -->
     <xsl:template match="node()|@*">

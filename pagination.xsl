@@ -33,8 +33,8 @@
     <xsl:output indent="yes" method="xml" encoding="UTF-8" />
 
     <!-- choix du préfixe -->
-    <xsl:param name="prefix" select="'s1'" />
-    <xsl:param name="foliotation" select="'foliotation'" />
+    <xsl:param name="prefix" select="'t4'" />
+    <xsl:param name="foliotation" select="'pageNum'" />
     <!--<xsl:param name="foliotation" select="'pageNum'" />-->
 
     <!-- Copie à l'identique du fichier -->
@@ -56,8 +56,8 @@
     
     <!-- pagination -->
     <xsl:template match="p/text()" mode="phase1">
-        <!--<xsl:analyze-string select="." regex="\[p\.(.*?)\]" flags="s">-->
-        <xsl:analyze-string select="." regex="\[fol\.(.*?)\]" flags="s">
+        <xsl:analyze-string select="." regex="\[p\.(.*?)\]" flags="s">
+        <!--<xsl:analyze-string select="." regex="\[fol\.(.*?)\]" flags="s">-->
             <xsl:matching-substring>
                 <xsl:element name="pb"/>
                 <xsl:element name="fw">
@@ -77,20 +77,20 @@
     
     <!-- numérotation des pb -->
     <xsl:template match="pb" mode="phase2">
-        <xsl:variable name="autoNum">
+        <xsl:variable name="num">
             <xsl:number level="any" />
         </xsl:variable>
         <xsl:variable name="autoNum">
             <xsl:choose>
-                <xsl:when test="($foliotation='foliotation') and ($autoNum mod 2 != 1)">
+                <xsl:when test="($foliotation='foliotation') and ($num mod 2 != 1)">
                     <xsl:sequence
-                        select="concat( format-number($autoNum  div 2, '0') , 'v' )" />
+                        select="concat( format-number($num  div 2, '0') , 'v' )" />
                 </xsl:when>
-                <xsl:when test="($foliotation='foliotation') and ($autoNum mod 2 = 1)">
-                    <xsl:sequence select="format-number( ( $autoNum + 1 ) div 2 , '0' ) " />
+                <xsl:when test="($foliotation='foliotation') and ($num mod 2 = 1)">
+                    <xsl:sequence select="format-number( ($num + 1 ) div 2 , '0' ) " />
                 </xsl:when>
                 <xsl:otherwise>
-                    <xsl:sequence select="format-number( $autoNum, '0' )" />
+                    <xsl:sequence select="format-number( $num, '0' )" />
                 </xsl:otherwise>
             </xsl:choose>
         </xsl:variable>
@@ -120,6 +120,5 @@
             <xsl:apply-templates select="@*|node()" />
         </xsl:copy>
     </xsl:template>
-    
     
 </xsl:stylesheet>

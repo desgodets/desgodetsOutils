@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader type="text" xml:lang="fr">
+        <fileDesc>
+            <titleStmt>
+                <title>Édition numérique de la lettre AS 22 32 incluant une annotation grammaticale
+                    et de structure</title>
+            </titleStmt>
+            <editionStmt>
+                <edition>Édition numérique</edition>
+                <author>
+                    <name>Marine Béranger</name>
+                    <ptr target="http://www.digitorient.com/?author=152"/>
+                </author>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>
+                    <name>Marine Béranger</name>
+                    <ptr target="http://www.digitorient.com/?author=152"/>
+                </publisher>
+                <date>2015-02-23</date>
+                <availability status="free">
+                    <licence target="http://creativecommons.org/licenses/by-nc-nd/4.0">
+                        <ab type="how_to_cite">
+                            <label>Comment citer ce texte :</label>
+                            <bibl>Édition numérique de la lettre AS 22 32, incluant une annotation
+                                grammaticale et de structure, créée et publiée en ligne par Marine
+                                Béranger. Dernière révision le 2015-02-24</bibl>
+                        </ab>
+                        <ab type="availability_file">
+                            <label>Conditions d'utilisation de ce fichier :</label>Ce fichier
+                            numérique est mis à disposition selon les termes de la Licence Creative
+                            Commons Attribution - Pas d'Utilisation Commerciale - Pas de
+                            Modification 4.0 International
+                            (http://creativecommons.org/licenses/by-nc-nd/4.0/). Pour toute question
+                            relative à l'usage de ce fichier ou pour proposer une modification,
+                            merci de contacter :
+                            <address>
+                           <addrLine><name type="person">Marine Béranger</name></addrLine>
+                           <addrLine>Mail : marine.beranger@gmail.com</addrLine>
+                        </address>
+                        </ab>
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <bibl>
+                        <edition>Première édition avec copie</edition>
+                        <monogr>
+                            <author>R. M. Whiting</author>
+                            <title>Old-Babylonian Letters from Tell Asmar</title>
+                            <date>1987</date>
+                        </monogr>
+                        <series>
+                            <title>Assyriological Studies</title>
+                            <biblScope unit="volume">22</biblScope>
+                        </series>
+                        <biblScope unit="pp">90</biblScope>
+                        <biblScope unit="part">texte n°32</biblScope>
+                        <biblScope unit="part">pl. 16</biblScope>
+                    </bibl>
+                    <bibl>
+                        <edition>Source de la présente édition numérique</edition>
+                        <note>Transcription informatisée</note>
+                        <analytic>
+                            <author>M. Béranger</author>
+                            <biblScope unit="part">texte AS 22 32</biblScope>
+                        </analytic>
+                        <series>
+                            <note>Base de données en ligne</note>
+                            <editor>D. Charpin</editor>
+                            <title>Archibab</title>
+                            <ptr>http://www.archibab.fr/</ptr>
+                        </series>
+                    </bibl>
+                </biblStruct>
+                <msDesc>
+                    <physDesc>
+                        <objectDesc>
+                            <support>tablette d'argile</support>
+                        </objectDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace>Région de la Diyala</origPlace>
+                            <origDate xml:id="#g1"/>
+                        </origin>
+                        <provenance type="found">Ešnunna</provenance>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <revisionDesc>15-02-24</revisionDesc>
+        <projetDesc>Cette édition numérique augmentée d'une annotation grammaticale et de structure
+            a été créée dans le cadre de la recherche doctorale effectuée par Marine Béranger, sous
+            la direction du Professeur Dominique Charpin, portant sur le repérage et la
+            compréhension des variations à l'oeuvre dans la production épistolaire écrite dans la
+            première moitié du IIe mil. av. J.-C. en dialecte paléo-babylonien, en vue de
+            l'utilisation du logiciel TXM (ENS Lyon)</projetDesc>
+        <editorialDecl>
+            <interpretation>
+                <list type="period">
+                    <date xml:id="g1">groupe 1 : de la chute d'Ur III (2002 av. J.-C) jusqu'à la
+                        réforme de l'écriture à Ešnunna</date>
+                    <date xml:id="g2">groupe 2 : d'Ur-Ninmar d'Ešnunna à Ipiq-Adad II
+                        d'Ešnunna</date>
+                    <date xml:id="g3">groupe 3 : de Naram-Sin d'Ešnunna à Samsu-iluna de
+                        Babylone</date>
+                    <date xml:id="g4">groupe 4 : d'Ammi-ditana de Babylone à Samsu-ditana de
+                        Babylone</date>
+                </list>
+            </interpretation>
+            <interpGrp type="pos">
+                <interp xml:id="PH">entité nommée: nom d'un homme</interp>
+                <interp xml:id="PF">entité nommée: nom d'une femme</interp>
+                <interp xml:id="DD">entité nommée: nom d'une divinité</interp>
+                <interp xml:id="TL">entité nommée: nom d'un lieu</interp>
+                <interp xml:id="VV">verbe</interp>
+                <interp xml:id="VS">substantif</interp>
+                <interp xml:id="VA">adjectif</interp>
+                <interp xml:id="ADV">adverbe</interp>
+                <interp xml:id="ADV PHRASE">locution adverbiale</interp>
+                <interp xml:id="CONJSUB">conjonction de subordination</interp>
+                <interp xml:id="CONJCOOR">conjonction de coordination</interp>
+                <interp xml:id="PARTICLE">particule</interp>
+                <interp xml:id="PREP">préposition</interp>
+                <interp xml:id="PRONrel">pronom relatif</interp>
+                <interp xml:id="PRONinter">pronom interrogatif</interp>
+                <interp xml:id="VZ">catégorie non précisée</interp>
+                <interp xml:id="UNKNOWN_broken">catégorie inconnue, texte cassé</interp>
+            </interpGrp>
+            <interpGrp type="function">
+                <interp xml:id="CONN">connecteur de discours</interp>
+                <interp xml:id="ORGATEXT">organisateur textuel</interp>
+            </interpGrp>
+        </editorialDecl>
+        <profileDesc>
+            <charDecl>Pour un affichage correct des diacritiques, utiliser une police unicode
+                développée pour l'assyriologie, par exemple Ungkam ou Architype</charDecl>
+            <ptr target="http://oracc.museum.upenn.edu/doc/help/visitingoracc/fonts"/>
+            <ptr target="http://www.archibab.fr/Outils/Pack_Typo_ARCHIBAB.zip"/>
+        </profileDesc>
+    </teiHeader>
+    <text xml:lang="Akkadian" id="AS 22 32" placeComposition="Région de la Diyala"
+        placeDiscovery="Ešnunna" origDate="1" sender="Šumu-aškura" addressee="Ur-Ninmar"
+        status="damaged_text_ok_lines">
+        <div type="address" place="1">
+            <w line="1" lemma="ana" pos="VZ">a-na</w>
+            <w line="1" lemma="Ur-Ninmar" pos="PH">UR.(d)NIN.MAR(ki)</w>
+            <w line="2" lemma="qabûm" pos="VV">qí-bí-ma</w>
+            <w line="3" lemma="umma" pos="VZ">um-ma</w>
+            <w line="3" lemma="Šumu-aškura" pos="PH">šu-mu-áš-ku-ra-ma</w>
+        </div>
+        <div type="main body">
+            <w line="4" lemma="eqlum" pos="VS">A.ŠÀ-um</w>
+            <w line="4" lemma="yâ'um" pos="VA">i-a-um</w>
+            <w line="5" lemma="ša" pos="VZ">ša</w>
+            <w line="5" lemma="baqrum" pos="VS">ba-aq-re-e</w>
+            <gap>[...]</gap>
+            <w line="9" lemma="eqlum" pos="VS">A.ŠÀ</w>
+            <gap>[...]</gap>
+            <unclear>
+                <w line="10" lemma="ana" pos="VZ">a-na</w>
+            </unclear>
+            <gap>x</gap>
+            <w line="10" lemma="u" pos="CONJCOOR">ù</w>
+            <w line="10" lemma="zêrum" pos="VS">NUMUN</w>
+            <w line="11" lemma="inanna" pos="ADV">i-na-an-na</w>
+            <unclear>
+                <w line="12" lemma="namkarum" pos="VS">nam-kà-ra-am</w>
+            </unclear>
+            <w line="13" lemma="ina" pos="VZ">i-na</w>
+            <unclear>
+                <w line="13" lemma="eqlum" pos="VS">A.ŠÀ</w>
+            </unclear>
+            <gap>[...] [...]</gap>
+            <w line="15" lemma="šumma" pos="PARTICLE" function="CONN">šum-ma</w>
+            <w line="15" lemma="lâ" pos="VZ">la</w>
+            <supplied>
+                <w line="15" lemma="kîam" pos="ADV">ki-am</w>
+            </supplied>
+            <w line="16" lemma="šapârum" pos="VV">šu-up-ra-am-ma</w>
+            <w line="17" lemma="alpum" pos="VS">GU₄.HI.A</w>
+            <w line="17" lemma="u" pos="CONJCOOR">ù</w>
+            <w line="17" lemma="wardum" pos="VS">ÌR.HI.A</w>
+            <w line="18" lemma="ṭarâdum" pos="VV">lu-uṭ-ru-dam</w>
+            <w line="19" lemma="u" pos="CONJCOOR" function="ORGATEXT">ù</w>
+            <w line="19" lemma="eqlum" pos="VS">A.ŠÀ</w>
+            <w line="20" lemma="ša" pos="VZ">ša</w>
+            <unclear>
+                <w line="20" lemma="Atta-li-El" pos="PH">(I)at-ta-li-el</w>
+            </unclear>
+            <w line="21" lemma="Mammakum" pos="PH">(I)ma-am-ma-kum</w>
+            <w line="22" lemma="akâlum" pos="VV">ik-kà-al</w>
+            <w line="23" lemma="kâmma" pos="CONJCOOR" function="CONN">ki-am-ma</w>
+            <w line="23" lemma="zêrum" pos="VS">NUMUN-šu</w>
+            <w line="24" lemma="mahârum" pos="VV">li-im-hu-úr</w>
+            <w line="25" lemma="u" pos="CONJCOOR" function="CONN">ù</w>
+            <w line="25" lemma="eqlum" pos="VS">A.ŠÀ</w>
+            <w line="25" lemma="awîlum" pos="VS">a-wi-lim</w>
+            <unclear>
+                <w line="26" lemma="šebêrum" pos="VV">li-iš-bi-ir</w>
+            </unclear>
+            <w line="27" lemma="u" pos="CONJCOOR" function="ORGATEXT">ù</w>
+            <unclear>
+                <w line="27" lemma="Puzur-Ištar" pos="PH">(I)pù-zur₈-iš₈-tár</w>
+            </unclear>
+            <w line="28" lemma="ṭarâdum" pos="VV">ṭù-úr-dam</w>
+        </div>
+    </text>
+</TEI>

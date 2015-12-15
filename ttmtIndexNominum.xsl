@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-    @Name :         ttmtChaines.xsl
+    @Name :         indexNominum.xsl
     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     @version :      009
     @creaDate :     2013/05/20
     @modifDate      
-    @vXslt:         1.0
+    @vXslt:         2.0
     @autor :        Emmanuel Château emchateau@laposte.net
     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     @use :          Cette feuille de style se charge de traiter les chaînes de caractères par le biais d'expressions régulières 
@@ -49,7 +49,7 @@
     -->
 
     <!-- régularisations -->
-    <xsl:template match="hi[@rend='Desgodets_IndexLocorum']/text()" mode="phase1">
+    <xsl:template match="hi[@rend='Desgodets_IndexNominum']/text()" mode="phase1">
         <xsl:analyze-string select="."
             regex="\[\p{{Z}}*?(.*?)\p{{Z}}?;\p{{Z}}*?(.*?)\p{{Z}}?;(.*?)\]"
             flags="s">
@@ -69,7 +69,7 @@
                 </xsl:element>
             </xsl:matching-substring>
             <xsl:non-matching-substring>
-                <xsl:element name="placeName">
+                <xsl:element name="persName">
                     <xsl:value-of select="." />
                 </xsl:element>
             </xsl:non-matching-substring>
@@ -78,8 +78,8 @@
     </xsl:template>
     
     
-    <xsl:template match="hi[@rend='Desgodets_IndexLocorum'][child::placeName]" mode="phase2">
-        <xsl:copy-of select="placeName"/>
+    <xsl:template match="hi[@rend='Desgodets_IndexNominum'][child::placeName]" mode="phase2">
+        <xsl:copy-of select="persName"/>
     </xsl:template>
     
     <!--
